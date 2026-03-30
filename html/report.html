@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - FixMyStreet Ghana</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .report-form-container {
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body data-page="report">
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">📍</div>
+                    <span>FixMyStreet</span>
+                </a>
+                <button class="mobile-menu-btn">☰</button>
+                <div class="nav-links">
+                    <a href="dashboard.html">View Reports</a>
+                    <a href="track.html">Track Report</a>
+                    <a href="admin/dashboard.html">Admin</a>
+                    <a href="report.html" class="btn btn-accent">Report Issue</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="report-form-container">
+                <h1 class="section-title">Report an Infrastructure Issue</h1>
+                <p class="section-subtitle">Help us know about issues in your community</p>
+
+                <form id="reportForm" class="card" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <label for="title">Issue Title <span class="required">*</span></label>
+                        <input type="text" id="title" name="title" required placeholder="e.g., Large pothole on Main Street">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description <span class="required">*</span></label>
+                        <textarea id="description" name="description" required placeholder="Provide detailed information about the issue..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category <span class="required">*</span></label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="severity">Severity <span class="required">*</span></label>
+                        <select id="severity" name="severity" required>
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">Region <span class="required">*</span></label>
+                        <select id="region" name="region" required>
+                            <option value="">Select a region</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="constituency">Constituency <span class="required">*</span></label>
+                        <select id="constituency" name="constituency" required>
+                            <option value="">Select a constituency</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="street_landmark">Street/Landmark <span class="required">*</span></label>
+                        <input type="text" id="street_landmark" name="street_landmark" required placeholder="e.g., Near Community Center Junction">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="anonymous" name="anonymous">
+                                <label for="anonymous" style="margin-bottom: 0;">Report Anonymously</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notify" name="notify" checked>
+                                <label for="notify" style="margin-bottom: 0;">Notify me of updates</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Submit Report</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 FixMyStreet Ghana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

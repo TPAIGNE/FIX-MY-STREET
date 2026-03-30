@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Details - FixMyStreet Ghana Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .detail-container {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+        
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .detail-item {
+            padding: 1rem;
+            background-color: var(--muted);
+            border-radius: var(--radius);
+        }
+        
+        .detail-item strong {
+            display: block;
+            color: #718096;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .status-update-form {
+            background-color: var(--card);
+            border: 2px solid var(--border);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <div class="logo-icon">📍</div>
+                    <span>FixMyStreet</span>
+                </a>
+                <button class="mobile-menu-btn">☰</button>
+                <div class="nav-links">
+                    <a href="../dashboard.html">View Reports</a>
+                    <a href="../track.html">Track Report</a>
+                    <a href="dashboard.html">Admin</a>
+                    <a href="../report.html" class="btn btn-accent">Report Issue</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="detail-container">
+                <a href="dashboard.html" class="btn btn-outline" style="margin-bottom: 1rem;">← Back to Dashboard</a>
+                
+                <div class="report-details"></div>
+
+                <div class="status-update-form">
+                    <h3 class="card-title">Update Report Status</h3>
+                    <form onsubmit="return handleStatusUpdate(event)">
+                        <div class="form-group">
+                            <label for="newStatus">New Status</label>
+                            <select id="newStatus" required>
+                                <option value="">Select new status</option>
+                                <option value="pending">Pending</option>
+                                <option value="in_progress">In Progress</option>
+                                <option value="resolved">Resolved</option>
+                                <option value="rejected">Rejected</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminNote">Admin Note</label>
+                            <textarea id="adminNote" placeholder="Add a note about this update..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Update Status</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 FixMyStreet Ghana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        function handleStatusUpdate(e) {
+            e.preventDefault();
+            alert('Status update functionality would be implemented here');
+            return false;
+        }
+    </script>
+</body>
+</html>
